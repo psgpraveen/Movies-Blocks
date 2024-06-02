@@ -95,7 +95,7 @@ const [use,setUse] = useState("");
                 Sign in
               </button>
             </form>
-            <Link to='/signup' className="text-xs text-gray-500 mt-3 mx-auto mt-4">Sign up</Link>
+            <Link to='/Movies-Blocks/signup' className="text-xs text-gray-500 mt-3 mx-auto mt-4">Sign up</Link>
           </div>
         </div>
       </section>

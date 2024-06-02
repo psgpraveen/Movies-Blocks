@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Api from '../api';
-import Login from '../Login/Index'
 const Index = () => {
   const [nam, setNam] = useState('');
   const [em, setEm] = useState('');
@@ -109,7 +108,7 @@ const Index = () => {
                 Sign Up
               </button>
             </form>
-            <Link to="/" className="text-xs text-gray-500 mt-3 mx-auto mt-4">Sign in</Link>
+            <Link to="/Movies-Blocks" className="text-xs text-gray-500 mt-3 mx-auto mt-4">Sign in</Link>
           </div>
         </div>
       </section>

@@ -7,9 +7,9 @@ function App() {
   return (
     <Router>
       <Routes >
-        <Route path='/' element={<Log />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/list' element={<Public />} />
+        <Route path='/Movies-Blocks' element={<Log />} />
+        <Route path='/Movies-Blocks/signup' element={<Signup />} />
+        <Route path='/Movies-Blocks/list' element={<Public />} />
       </Routes>
     </Router>
     

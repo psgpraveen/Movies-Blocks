@@ -51,8 +51,8 @@ const Index = () => {
           <label for="Year"></label>
           <input type="number" onChange={year} value={yea} className="border-2 border-orange-600	 rounded-md  focus:outline-none " placeholder="  Year" id="Year" name="Year" min="1900" max="2024"></input>
         </nav>
-        <Link to="/List" type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2 me-2  dark:focus:ring-yellow-900">Public List</Link>
-        <a href='/' className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Out
+        <Link to="/Movies-Blocks/List" type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2 me-2  dark:focus:ring-yellow-900">Public List</Link>
+        <a href='/Movies-Blocks' className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Out
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>

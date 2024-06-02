@@ -11,7 +11,7 @@ const Index = () => {
     const error = useSelector((state) => state.movies.error);
     const [sr, setSr] = useState("bollywood");
 
-    const [type, setType] = useState(" ");
+    // const [type, setType] = useState(" ");
     const [value, setValue] = useState('');
     const [id, setId] = useState("");
     const [hidden, setHidden] = useState(true);
@@ -37,7 +37,7 @@ const Index = () => {
         }
     }
     useEffect(() => {
-        dispatch(fetchMovies({ sr, type }));
+        dispatch(fetchMovies({ sr }));
     }, [sr, dispatch]);
     useEffect(() => {
         console.log("id>>>", id);
