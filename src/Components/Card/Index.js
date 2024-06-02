@@ -60,7 +60,7 @@ const Index = () => {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Movies - Block</h1>
+                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Movies - Blocks</h1>
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                             "Discover a vast collection of movies across genres, with detailed information and the latest updates. Explore, search, and enjoy the ultimate movie experience on our website!"
                         </p>
@@ -77,7 +77,7 @@ const Index = () => {
                                             <img
                                                 alt="ecommerce"
                                                 className="object-cover object-center w-full h-full block"
-                                                src={d.Poster !== 'N/A' ? d.Poster : 'https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-product-not-available-icon-117825738.jpg'}
+                                                src={d.Poster !== 'N/A' ? d.Poster : 'https://static.vecteezy.com/system/resources/previews/000/362/681/original/vector-website-error-404-page-not-found.jpg'}
                                             />
                                         </a>
                                         <div className="mt-4">
