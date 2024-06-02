@@ -10,7 +10,7 @@ const Index = () => {
 
     let data = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/getlist')
+            const response = await axios.get('https://movies-blocks-backend.vercel.app/getlist')
             setListdata(response.data);
             console.log(response.data);
         } catch (error) {

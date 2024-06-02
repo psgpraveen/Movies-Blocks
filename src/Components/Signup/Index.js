@@ -27,7 +27,7 @@ const Index = () => {
       setTimeout(() => setHidden(true), 3000);
     } else {
       try {
-        const response = await axios.post('http://localhost:5000/signup', {
+        const response = await axios.post('https://movies-blocks-backend.vercel.app/signup', {
           name: nam,
           email: em,
           Time: new Date().toISOString(),

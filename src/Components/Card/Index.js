@@ -25,7 +25,7 @@ const Index = () => {
     const imdb = (i) => async () => {
         setId(i)
         try {
-            const response = await axios.post('http://localhost:5000/list', {
+            const response = await axios.post('https://movies-blocks-backend.vercel.app/list', {
                 id: i
             });
             setM(response.data.message);

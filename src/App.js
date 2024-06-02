@@ -11,12 +11,8 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/list' element={<Public />} />
       </Routes>
-
-      {/* <Header />
-      <Card />
-      <Footer /> */}
     </Router>
-    // <><Card /></>
+    
   );
 }
 
