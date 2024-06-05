@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Api from '../api';
+
+// Creating functional component 'Index'
 const Index = () => {
+  // Using state hooks to manage form fields and messages
   const [nam, setNam] = useState('');
   const [em, setEm] = useState('');
   const [pass, setPass] = useState('');
   const [hidden, setHidden] = useState(true);
   const [m, setM] = useState('');
 
+  // Function to handle form submission
   const send = async (e) => {
     e.preventDefault();
 
@@ -51,6 +55,7 @@ const Index = () => {
     }
   };
 
+  // Returning JSX
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -64,6 +69,7 @@ const Index = () => {
           </div>
           <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
             <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Sign Up</h2>
+            {/* Form for user sign up */}
             <form onSubmit={send}>
               <div className="relative mb-4">
                 <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
@@ -108,10 +114,12 @@ const Index = () => {
                 Sign Up
               </button>
             </form>
+            {/* Link to sign in page */}
             <Link to="/Movies-Blocks" className="text-xs text-gray-500 mt-3 mx-auto mt-4">Sign in</Link>
           </div>
         </div>
       </section>
+      {/* Rendering Api component */}
       <div>
         <Api hidden={hidden} m={m} />
       </div>
@@ -119,4 +127,5 @@ const Index = () => {
   );
 };
 
+// Exporting Index component
 export default Index;

@@ -1,27 +1,38 @@
+// Importing necessary modules and components
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "../Footer/Index";
 
+// Creating functional component 'Index'
 const Index = () => {
+  // Using state hook to manage 'listdata' state
   const [listdata, setListdata] = useState([]);
 
+  // Declaring an asynchronous function 'data' to fetch data from API
   let data = async () => {
     try {
+      // Making GET request to fetch data from API endpoint
       const response = await axios.get(
         "https://movies-blocks-backend.vercel.app/getlist"
       );
+      // Updating 'listdata' state with fetched data
       setListdata(response.data);
+      // Logging fetched data to console
       console.log(response.data);
     } catch (error) {
+      // Logging error if request fails
       console.log(error);
     }
   };
+
+  // useEffect hook to execute 'data' function only once on component mount
   useEffect(() => {
     data();
   }, []);
+
+  // Returning JSX
   return (
     <>
-      {" "}
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a
@@ -32,9 +43,9 @@ const Index = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
               viewBox="0 0 24 24"
             >
@@ -50,9 +61,9 @@ const Index = () => {
             <svg
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="w-4 h-4 ml-1"
               viewBox="0 0 24 24"
             >
@@ -68,6 +79,7 @@ const Index = () => {
               PublicList
             </h1>
             <div className="flex flex-wrap -m-4">
+              {/* Conditional rendering of list data */}
               {listdata.length > 0
                 ? listdata.map((datalisted, index1) => (
                     <div key={index1} className="p-4 md:w-1/3">
@@ -75,6 +87,7 @@ const Index = () => {
                         <img
                           className="lg:h-48 md:h-36 w-full object-cover object-center"
                           src={
+                            // Checking if 'Poster' is available, if not, displaying a default image
                             datalisted.Poster !== 'N/A'? datalisted.Poster: 'https://static.vecteezy.com/system/resources/previews/000/362/681/original/vector-website-error-404-page-not-found.jpg'
                           }
                           alt="blog"
@@ -93,14 +106,16 @@ const Index = () => {
                       </div>
                     </div>
                   ))
-                : "No data "}
+                : "No data "} {/* Displaying message if there's no data */}
             </div>
           </div>
         </section>
       </div>
+      {/* Including Footer component */}
       <Footer />
     </>
   );
 };
 
+// Exporting Index component
 export default Index;
